@@ -21,6 +21,7 @@ build:
     - docker build --pull -t registry.nocsi.org/archlinux-aur:latest -t "$CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME" .
     - docker push "$CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME"
     - docker push registry.nocsi.org/archlinux-aur:latest
+    - docker run -d --rm -e EMAIL_TO="build@nocsi.com" -e EMAIL_PW="CXX?wCCHMYVeRfG0AsCH_T%nr" registry.nocsi.org/build-docker-report "$CI_BUILD_REF" "$CI_SERVER_TLS_CA_FILE"
   only:
     - master
 

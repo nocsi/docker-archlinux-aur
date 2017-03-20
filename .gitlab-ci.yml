@@ -30,7 +30,7 @@ build:
 #  - docker
 #  - dind
 #  script:
-#  - docker login -u $DOCKERHUB_USER -e $DOCKERHUB_MAIL -p $DOCKERHUB_PASSWORD
+#  - docker login -u nocsi -e l@nocsi.com -p rTPwQ025pM!0::Ix7fpoI)%X+zV
 #  - docker build --pull -t nocsigroup/archlinux-aur .
 #  - docker push nocsigroup/archlinux-aur:latest
 #  only:
